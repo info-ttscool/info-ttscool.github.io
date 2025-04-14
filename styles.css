@@ -187,25 +187,24 @@ h2 {
   transition: color 0.3s;
 }
 
-/* Общие стили для мобильных устройств */
-@media (max-width: 768px) {
-  h1, h2 {
-    font-size: 1.5em; 
-  }
-
-  .trainer-card {
-    margin-bottom: 20px;
-  }
-}
-
-/* Стили для экранов с шириной до 576px */
+/* Для очень маленьких экранов (смартфоны в портретном режиме) */
 @media (max-width: 576px) {
-  .container {
-    max-width: 95%;
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .gallery-section {
+    padding: 20px 10px;
+    width: calc(100vw - 20px);
   }
 
   .slider {
-    padding: 5px 10px;
+    padding: 5px;
+    width: calc(100% - 10px);
   }
 
   .slider .slick-slide {
@@ -213,12 +212,31 @@ h2 {
   }
 
   .slider__img {
-    width: 90%;
+    height: 150px;
   }
 
-  .slick-prev, .slick-next {
-    width: 30px !important; 
-    height: 30px !important;
+  .trainer-card {
+    margin-bottom: 10px;
+  }
+}
+
+/* Для горизонтальных смартфонов и маленьких планшетов */
+@media (min-width: 577px) and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .gallery-section {
+    padding: 30px 15px;
+    width: calc(100vw - 30px);
+  }
+
+  .slider .slick-slide {
+    margin: 15px;
+  }
+
+  .slider__img {
+    height: 200px;
   }
 }
 
